@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="myView"
+        type="com.example.recyclerview.data.ViewmodelClass" />
+</data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:hint="@{myView.hintUsername}"
+        android:text="@={myView.inputUsername}"
+        />
+
+    <EditText
+        android:id="@+id/email"
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@{myView.hintEmail}"
+        android:text="@={myView.inputEmail}"
+
+        />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="150dp"
+        android:text="@string/add"
+        android:onClick="@{()->myView.add()}"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_marginTop="500dp"
+        android:layout_height="wrap_content"
+         />
+
+</RelativeLayout>
+</layout>

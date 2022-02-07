@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="username">Username</string>
+    <string name="email_gmail_com">email@gmail.com</string>
+    <string name="add">ADD</string>
+    <string name="yes">yes</string>
+</resources>
